@@ -1,0 +1,9 @@
+[
+  { "Code": "100", "Name": "June Zupers", "Sports": "Base Ball" },
+  { "Code": "200", "Name": "Fred Cortez", "Sports": "Soccer" },
+  { "Code": "300", "Name": "Kevin Burks", "Sports": "Tennis" },
+  { "Code": "400", "Name": "LinThu", "Sports": "Football" },
+  { "Code": "500", "Name": "Myo", "Sports": "Drive" },
+  { "Code": "600", "Name": "Thu", "Sports": "play" },
+  { "Code": "700", "Name": "AyeAye", "Sports": "going" }
+]
