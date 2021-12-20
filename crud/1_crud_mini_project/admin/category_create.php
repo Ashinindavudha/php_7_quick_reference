@@ -2,25 +2,7 @@
 check();
 ?>
 <?php include("connection.php") ?>
-<?php
-    $db = mysqli_select_db($connection, "online_class_basic");
-    $user_name = "";
-    $user_email = "";
-    $user_password = "";
-    $user_mobile = "";
-    $user_address = "";
-    $user_id = "";
-    $query = "select * from users where id = $_GET[id]";
-    $query_run = mysqli_query($connection, $query);
-    while ($row = mysqli_fetch_assoc($query_run)) {
-        $user_name = $row['name'];
-        $user_email = $row['email'];
-        $user_password = $row['password'];
-        $user_mobile = $row['mobile'];
-        $user_address = $row['address'];
-        $user_id = $row['id'];
-    }
-    ?>
+
 
 <?php include("includes/head.php") ?>
 
@@ -60,38 +42,23 @@ check();
                             <!-- Basic Card Example -->
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">User Edit</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Categories Create</h6>
                                 </div>
                                 <div class="card-body">
                                    <form action="" class="user" method="POST">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" name="name" class="form-control form-control-user" placeholder="Name" value="<?php echo $user_name; ?>" required>
+                                        <input type="text" name="cat_name" class="form-control form-control-user" placeholder="Category Name" required>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="email" class="form-control form-control-user" name="email" value="<?php echo $user_email; ?>" placeholder="Email" required>
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-                                            name="password" placeholder="Password" value="<?php echo $user_password; ?>">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"
-                                            name="mobile" placeholder="Mobile" value="<?php echo $user_mobile; ?>">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" name="address" value="<?php echo $user_address; ?>" placeholder="Address">
-                                        
-                                </div>
-                                <button type="submit" name="update" class="btn btn-primary btn-user btn-block">
-                                    Update Account
+                                    <br><br>
+                                <div class="form-group row mr-5">
+                                    <button type="submit" name="create_category" class="btn btn-primary btn-user btn-block">
+                                    Create Category
                                 </button>
+                                </div>
                             </form>
                                 </div>
+                                <a href="category_index.php" class="btn btn-primary">Cancel</a>
                             </div>
 
                         </div>
@@ -125,11 +92,12 @@ check();
     <!-- Bootstrap core JavaScript-->
     <?php include("includes/script.php") ?>
 
-    <?php
-       if (isset($_POST['update'])) {
-           $query = "UPDATE users SET name='$_POST[name]', email='$_POST[email]', password='$_POST[password]', mobile='$_POST[mobile]', address='$_POST[address]' WHERE id = '$_GET[id]'";
+   <?php
+       if (isset($_POST['create_category'])) {
+           $db = mysqli_select_db($connection, 'online_class_basic');
+           $query = "INSERT INTO categories values ('', '$_POST[cat_name]')";
            $query_run = mysqli_query($connection, $query);
-           header("location: user_index.php");
+           //header("Location: category_index.php");
            //exit();
        }
 ?>

@@ -34,7 +34,7 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary"><a href="author_create.php">Create Author</a></h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -43,9 +43,6 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Mobile</th>
-                                            <th>Adress</th>
                                             <th>Action</th>
                                             
                                         </tr>
@@ -54,9 +51,6 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Name</th>
-                                            <th>Email</th>
-                                            <th>Mobile</th>
-                                            <th>Adress</th>
                                             <th>Action</th>
                                             
                                         </tr>
@@ -64,19 +58,16 @@
                                     <tbody>
                                          <?php
                                $db = mysqli_select_db($connection, 'online_class_basic');
-                               $query = "SELECT * FROM users";
+                               $query = "SELECT * FROM authors";
                                $query_run = mysqli_query($connection, $query);
                                while ($row = mysqli_fetch_assoc($query_run)) {
                                    ?>
                                         <tr>
-                                            <td><?php echo $row['id']; ?></td>
-                                            <td><?php echo $row['name']; ?></td>
-                                            <td><?php echo $row['email']; ?></td>
-                                            <td><?php echo $row['mobile']; ?></td>
-                                            <td><?php echo $row['address']; ?></td>
+                                            <td><?php echo $row['author_id']; ?></td>
+                                            <td><?php echo $row['author_name']; ?></td>
                                             <td>
-                                                <a href="user_edit.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">Edit</a>
-                                                <a href="user_delete.php?id=<?php echo $row['id']; ?>" class="btn btn-danger">Delete</a>
+                                                <a href="author_edit.php?authorid=<?php echo $row['author_id']; ?>" class="btn btn-primary">Edit</a>
+                                                <a href="author_delete.php?authorid=<?php echo $row['author_id']; ?>" class="btn btn-danger">Delete</a>
                                             </td>
                                             <?php
                                } ?>
