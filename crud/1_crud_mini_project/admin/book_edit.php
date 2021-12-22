@@ -53,7 +53,7 @@
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Library Book Create</h4>
+                    <h4 class="text-right">Library Book Update</h4>
                 </div>
                <form action="" method="POST">
                 <div class="row mt-3">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
                 <div class="mt-5 text-center">
-                    <button name="update_book" class="btn btn-primary profile-button" type="submit">Book Create</button>
+                    <button name="update_book" class="btn btn-primary profile-button" type="submit">Book Update</button>
                 </div>
                 </form>
             </div>
