@@ -1,7 +1,7 @@
 <?php include("function.php") ?>
 
 <?php check(); ?>
-<?php include("layouts/head.php") ?>
+<?php include("includes/head.php") ?>
 
 <body id="page-top">
 
@@ -9,7 +9,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-      <?php include("layouts/sidebar.php") ?>
+      <?php include("includes/sidebar.php") ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -19,7 +19,7 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <?php include("layouts/navbar.php") ?>
+                <?php include("includes/navbar.php") ?>
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
@@ -73,7 +73,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <?php include("layouts/footer.php") ?>
+            <?php include("includes/footer.php") ?>
             <!-- End of Footer -->
 
         </div>
@@ -88,10 +88,10 @@
     </a>
 
     <!-- Logout Modal-->
-    <?php include("layouts/Logout_Modal.php") ?>
+    <?php include("includes/Logout_Modal.php") ?>
 
     <!-- Bootstrap core JavaScript-->
-    <?php include("layouts/script.php") ?>
+    <?php include("includes/script.php") ?>
 
 </body>
 
