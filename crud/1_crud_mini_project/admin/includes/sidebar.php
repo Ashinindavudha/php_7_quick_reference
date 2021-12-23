@@ -56,7 +56,7 @@
                         <a class="collapse-item" href="../admin/category_index.php">Category</a>
                         <a class="collapse-item" href="../admin/author_index.php">Author</a>
                         <a class="collapse-item" href="../admin/book_index.php">Library Book</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <a class="collapse-item" href="../admin/issue_book_create.php">Issue Book</a>
                     </div>
                 </div>
             </li>
